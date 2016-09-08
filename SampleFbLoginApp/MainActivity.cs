@@ -35,9 +35,7 @@ namespace SampleFbLoginApp
                          authorizeUrl: new Uri(Constants.authorize),
                          redirectUrl: new Uri(Constants.reDirect));
             //We should give redirectUrl in redirect URl option in products in facebook-developers options
-
-            auth.AllowCancel = allowCancel;
-            
+                        
             // If authorization succeeds or is canceled, .Completed will be fired.
             auth.Completed += (s, ee) => {
                 var progressDialog = ProgressDialog.Show(this, Constants.wait, Constants.info, true);
@@ -74,16 +72,18 @@ namespace SampleFbLoginApp
                     {
                         var obj = JsonValue.Parse(t.Result.GetResponseText());
                         
+                        //Instead of passing data through activity we are just assigning to another class 
                         DataClass.userData = obj;
 
                         //Passing username to next Activity..
-                        //activity2.PutExtra("MyData","User Details: " +  obj);
+                        //activity2.PutExtra("MyData", "User Details: " +  obj);
                         StartActivity(activity2);
                     }
 
                 }, UIScheduler);
             };
 
+            //Getting facebook login Ui
             var intent = auth.GetUI(this);
             StartActivity(intent);
         }
