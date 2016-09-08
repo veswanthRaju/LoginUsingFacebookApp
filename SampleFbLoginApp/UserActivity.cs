@@ -32,7 +32,7 @@ namespace SampleFbLoginApp
             }
             catch (Exception)
             {
-                mail.Text = " sorry, We cannot access more fields!!";
+                mail.Text = "Sorry, We cannot access more fields!!";
                 frnds.Text = bdy.Text = "";
             }
 
