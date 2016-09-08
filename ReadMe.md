@@ -18,3 +18,5 @@
 > And then give the Graph Uri based on the data we need to display. For those url's just follow [this link.](https://developers.facebook.com/docs/graph-api/using-graph-api/)
 
 > [Reference](https://visualstudiomagazine.com/articles/2014/07/01/be-more-social.aspx)
+
+> If we want to get more fields from facebook like email, birthday and anything just follow [this url](https://developers.facebook.com/tools/explorer/332063047134905?method=GET&path=me%3Ffields%3Did%2Cname&version=v2.7)
