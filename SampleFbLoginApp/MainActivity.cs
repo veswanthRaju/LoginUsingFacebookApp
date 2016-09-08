@@ -21,7 +21,7 @@ namespace SampleFbLoginApp
             var facebook = FindViewById<Button>(Resource.Id.FacebookButton);
             facebook.Click += delegate { LoginToFacebook(true); };
 
-            activity2 = new Intent(this, typeof(Userdata));
+            activity2 = new Intent(this, typeof(UserActivity));
         }
 
         private static readonly TaskScheduler UIScheduler = TaskScheduler.FromCurrentSynchronizationContext();

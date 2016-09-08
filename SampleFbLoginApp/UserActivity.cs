@@ -10,7 +10,7 @@ using System.Net;
 namespace SampleFbLoginApp
 {
     [Activity(Label = "Userdata")]
-    public class Userdata : Activity
+    public class UserActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
