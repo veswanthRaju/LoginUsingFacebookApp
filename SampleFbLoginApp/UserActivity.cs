@@ -2,6 +2,7 @@ using Android.App;
 using Android.Graphics;
 using Android.OS;
 using Android.Widget;
+using System;
 using System.Net;
 
 namespace SampleFbLoginApp
@@ -23,11 +24,19 @@ namespace SampleFbLoginApp
             var mail = FindViewById<TextView>(Resource.Id.email);
             var bdy = FindViewById<TextView>(Resource.Id.Birthday);
 
+            try
+            {
+                mail.Text = text["email"];
+                bdy.Text = text["birthday"];
+                frnds.Text = text["friends"]["summary"]["total_count"].ToString();
+            }
+            catch (Exception)
+            {
+                mail.Text = " sorry, We cannot access more fields!!";
+                frnds.Text = bdy.Text = "";
+            }
+
             username.Text = text["name"];
-            mail.Text = text["email"];
-            bdy.Text = text["birthday"];
-            frnds.Text = text["friends"]["summary"]["total_count"].ToString();
-            
             var imageBitmap = GetImageBitmapFromUrl(imageUrl);
             picture.SetImageBitmap(imageBitmap);
         }

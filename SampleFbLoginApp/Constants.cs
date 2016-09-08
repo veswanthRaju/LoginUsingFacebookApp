@@ -4,7 +4,7 @@
     {
         public static string authorize = "https://m.facebook.com/dialog/oauth/";
         public static string reDirect= "http://www.facebook.com/connect/login_success.html";
-        public static string ID = "Give Your App Id";
+        public static string ID = "Give Your App Id"; 
         //Give access to below fields in developer facebook
         //then only you will get these fields
         public static string Url = "https://graph.facebook.com/v2.7/me?fields=id,name,email,friends,birthday,picture.type(large)";
