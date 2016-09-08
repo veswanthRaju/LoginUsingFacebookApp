@@ -1,10 +1,7 @@
 using Android.App;
 using Android.Graphics;
 using Android.OS;
-using Android.Transitions;
 using Android.Widget;
-using Java.Net;
-using System;
 using System.Net;
 
 namespace SampleFbLoginApp
@@ -22,9 +19,15 @@ namespace SampleFbLoginApp
 
             var username = FindViewById<TextView>(Resource.Id.Username);
             var picture = FindViewById<ImageView>(Resource.Id.userImageView);
-            
-            username.Text = text["name"];
+            var frnds = FindViewById<TextView>(Resource.Id.friends);
+            var mail = FindViewById<TextView>(Resource.Id.email);
+            var bdy = FindViewById<TextView>(Resource.Id.Birthday);
 
+            username.Text = text["name"];
+            mail.Text = text["email"];
+            bdy.Text = text["birthday"];
+            frnds.Text = text["friends"]["summary"]["total_count"].ToString();
+            
             var imageBitmap = GetImageBitmapFromUrl(imageUrl);
             picture.SetImageBitmap(imageBitmap);
         }

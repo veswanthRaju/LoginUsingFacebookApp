@@ -49,7 +49,7 @@ namespace SampleFbLoginApp
                     progressDialog.Hide();
                     return;
                 }
-                
+
                 // Now that we're logged in, make a OAuth2 request to get the user's info.
                 var request = new OAuth2Request("GET", new Uri(Constants.Url), null, ee.Account);
                 request.GetResponseAsync().ContinueWith(t => {
