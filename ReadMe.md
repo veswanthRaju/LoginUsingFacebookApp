@@ -20,3 +20,5 @@
 > [Reference](https://visualstudiomagazine.com/articles/2014/07/01/be-more-social.aspx)
 
 > If we want to get more fields from facebook like email, birthday and anything just made setting in [this url](https://developers.facebook.com/tools/explorer/332063047134905?method=GET&path=me%3Ffields%3Did%2Cname&version=v2.7)
+
+### For Twitter Just follow the [Link here](https://mobileprogrammerblog.wordpress.com/2016/01/23/xamarin-android-twitter-authentication/)
